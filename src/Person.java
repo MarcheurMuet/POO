@@ -1,24 +1,26 @@
-
 public class Person {
 	
-	static String namePerson = "";
+	String namePerson = "";
 	String town = "unknow";
 	int age = 0;
 	String firstName;
+	Object City;
 	
-	public Person(String namePerson, String firstName,int age, String town) {
-		Person.namePerson = namePerson;
+	public Person(String namePerson, String firstName,int age, String town, Object City) {
+		this.namePerson = namePerson;
 		this.firstName = firstName;
-		this.age = 0;
+		this.age = age;
 		this.town = town;
+		this.City = City;
 	}
 	
 	public String getnamePerson() {
 		return namePerson;
 	}
+	
 	public void setnamePerson(String namePerson) {
 		// TODO Auto-generated method stub
-		Person.namePerson = namePerson;
+		this.namePerson = namePerson;
 	}
 	
 	public String getfirstName() {
@@ -46,5 +48,15 @@ public class Person {
 		this.age = age;
 	}
 	
+	public Object getCity() {
+		return City;
+	}
+
+	public void setCity(Object City) {
+		this.City = City;
+	}
 	
+	public String toString() {
+		return "[LastName= "+ getnamePerson() + ", firstName= "+ getfirstName() + ", age= "+getage()+ ", adress= "+ gettown()+"] "+ getCity()+"\n";
+	}
 }

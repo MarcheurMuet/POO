@@ -3,18 +3,26 @@ public class City {
 	static String name = "";
 	String country = "unknow";
 	int people = 0;
+	String state = "";
 	static int cityNumb = 0;
 	static int cityNumbration = 0;
 	
 	final int MIN_CITY_PEOPLE = 0;
 	final int MIN_CITY = 0;
 	
-	public City(String name, String country, int people) {
+	public City(String name, int people, String state) {
 		City.name = name;
-		this.country = country;
 		this.people = people;
+		this.state = state;
 		cityNumbration++;
 	}
+	
+//	public City(String name, String country, int people) {
+//		City.name = name;
+//		this.country = country;
+//		this.people = people;
+//		cityNumbration++;
+//	}
 //	
 //	public City(String name) {
 //		this.name = name;
@@ -64,6 +72,14 @@ public class City {
 		this.country = country;
 	}
 	
+	public String getstate() {
+		return state;
+	}
+	public void setstate(String state) {
+		// TODO Auto-generated method stub
+		this.state = state;
+	}
+	
 	public int getpeople() {
 		return people;
 	}
@@ -86,8 +102,12 @@ public class City {
 //		return "\n[Ville : "+ getName() + "]"+" [Pays : " + getCountry() +"]"+ " [Nombre d'habitants : " + getPeople()+"]";
 //	}
 	
+//	public String toString() {
+//		return "\nLa ville de "+ getname() +" en " + getstatut() + " ayant " + getpeople()+" habitants";
+//	}
+	
 	public String toString() {
-		return "\nLa ville de "+ getname() +" en " + getcountry() + " ayant " + getpeople()+" habitants";
+		return "Borne city [name= "+ getname() +", state= " + getstate() + ", nbhabitant= " + getpeople()+"]";
 	}
 	
 	public City(String name, int people) {
@@ -97,16 +117,16 @@ public class City {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		City Montpellier = new City("Montpellier","France", 4000);
-		City Toulouse = new City("Toulouse","France", 444000);
+//		City Montpellier = new City("Montpellier","France", 4000);
+//		City Toulouse = new City("Toulouse","France", 444000);
 		
-		System.out.println(Montpellier+ "\n");
-		
-//		city.setPeople(-5000);
-		while (cityNumb < cityNumbration) {
-			cityNumb = cityNumb +1;
-		}
-		Toulouse.display(name);
+//		System.out.println(Montpellier+ "\n");
+//		
+////		city.setPeople(-5000);
+//		while (cityNumb < cityNumbration) {
+//			cityNumb = cityNumb +1;
+//		}
+//		Toulouse.display(name);
 		
 //		System.out.println(Toulouse);
 		System.out.println("\nLe total de ville est de : " +  cityNumb);
