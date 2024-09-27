@@ -1,26 +1,25 @@
 public class Person {
+    private String name;
+    private String firstName;
+    private int age;
+    private String town;
+    private City city;
 	
-	String namePerson = "";
-	String town = "unknow";
-	int age = 0;
-	String firstName;
-	Object City;
-	
-	public Person(String namePerson, String firstName,int age, String town, Object City) {
-		this.namePerson = namePerson;
-		this.firstName = firstName;
-		this.age = age;
-		this.town = town;
-		this.City = City;
+	 public Person(String name, String firstName, int age, String town, City city) {
+	        this.name = name;
+	        this.firstName = firstName;
+	        this.age = age;
+	        this.town = town;
+	        this.city = city;
+	    }
+
+	public String getname() {
+		return name;
 	}
 	
-	public String getnamePerson() {
-		return namePerson;
-	}
-	
-	public void setnamePerson(String namePerson) {
+	public void setname(String name) {
 		// TODO Auto-generated method stub
-		this.namePerson = namePerson;
+		this.name = name;
 	}
 	
 	public String getfirstName() {
@@ -31,7 +30,7 @@ public class Person {
 		this.firstName = firstName;
 	}
 	
-	public String gettown() {
+	public Object gettown() {
 		return town;
 	}
 	public void settown(String town) {
@@ -49,14 +48,18 @@ public class Person {
 	}
 	
 	public Object getCity() {
-		return City;
+		return city;
 	}
 
-	public void setCity(Object City) {
-		this.City = City;
+	public void setCity(City city) {
+		this.city = city;
 	}
 	
 	public String toString() {
-		return "[LastName= "+ getnamePerson() + ", firstName= "+ getfirstName() + ", age= "+getage()+ ", adress= "+ gettown()+"] "+ getCity()+"\n";
+		return  getname() +  getfirstName() + ", age= "+getage() + " "+  gettown()+ getCity();
 	}
+	
+	public void afficherAvecPopulation() {
+        System.out.printf("Nom : %s, Prénom : %s, Ville : %s (%d habitants)%n", name, firstName, city.getName(), city.getpeople());
+    }
 }

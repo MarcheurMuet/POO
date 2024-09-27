@@ -1,21 +1,23 @@
 public class City {
+    private String name;
+    private int people;
+    private String country;
+    static int cityNumb = 0;
 
-	static String name = "";
-	String country = "unknow";
-	int people = 0;
-	String state = "";
-	static int cityNumb = 0;
 	static int cityNumbration = 0;
+
 	
+
 	final int MIN_CITY_PEOPLE = 0;
+
 	final int MIN_CITY = 0;
-	
-	public City(String name, int people, String state) {
-		City.name = name;
-		this.people = people;
-		this.state = state;
-		cityNumbration++;
-	}
+
+    // Constructeur
+    public City(String name, int people, String country) {
+        this.name = name;
+        this.people = people;
+        this.country = country;
+    }
 	
 //	public City(String name, String country, int people) {
 //		City.name = name;
@@ -56,12 +58,12 @@ public class City {
 //		city1.setPeople(city1.People + 2000 );
 //		city1.display();
 //		}
-	public String getname() {
+	public String getName() {
 		return name;
 	}
-	public void setname(String name) {
+	public void setName(String name) {
 		// TODO Auto-generated method stub
-		City.name = name;
+		this.name = name;
 	}
 	
 	public String getcountry() {
@@ -70,14 +72,6 @@ public class City {
 	public void setcountry(String country) {
 		// TODO Auto-generated method stub
 		this.country = country;
-	}
-	
-	public String getstate() {
-		return state;
-	}
-	public void setstate(String state) {
-		// TODO Auto-generated method stub
-		this.state = state;
 	}
 	
 	public int getpeople() {
@@ -107,11 +101,11 @@ public class City {
 //	}
 	
 	public String toString() {
-		return "Borne city [name= "+ getname() +", state= " + getstate() + ", nbhabitant= " + getpeople()+"]";
+		return "Borne city [name= "+ getName() + ", nbhabitant= " + getpeople()+"]";
 	}
 	
 	public City(String name, int people) {
-		City.name = name;
+		this.name = name;
 		this.people = people;
 	}
 	
@@ -130,5 +124,5 @@ public class City {
 		
 //		System.out.println(Toulouse);
 		System.out.println("\nLe total de ville est de : " +  cityNumb);
-		}
+	}
 }
