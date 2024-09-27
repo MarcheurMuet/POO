@@ -9,13 +9,21 @@ public class TestPerson {
         Person Lawrence = new Person("Lawrence", "Jennifer", 30, "Louisville au USA", new City("Indian Hills", 2500, "USA"));
 
         Person[] personnes = {Macron, Sarkozy, Johnson, Depardieu, Kravitz, Lawrence};
-
+        	
         for (Person personne : personnes) {
-        	Object ville = personne.gettown();
-        	if (((City) personne.getCity()).getcountry().equals("France") && (ville.equals("Paris"))) {
-        		System.out.println(personne + " population Paris 2000000 d'habitants");
-        	} else if (((City) personne.getCity()).getcountry().equals("France")) {
-                       System.out.println(personne);
+        	if(((City) personne.getCity()).getcountry().contains("")){
+        		System.out.println(personne);
+        	}
+        }
+        
+        System.out.println("--------------------------------------------------");
+        
+        for (Person personneVerif : personnes) {
+        	Object ville = personneVerif.gettown();
+        	if (((City) personneVerif.getCity()).getcountry().equals("France") && (ville.equals("Paris"))) {
+        		System.out.println(personneVerif + " population Paris 2000000 d'habitants");
+        	} else if (((City) personneVerif.getCity()).getcountry().equals("France")) {
+                       System.out.println(personneVerif);
                    }
                 }
             }
