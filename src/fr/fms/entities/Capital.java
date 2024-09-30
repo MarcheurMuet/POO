@@ -1,36 +1,23 @@
 package fr.fms.entities;
 
-public class Capital {
+public class Capital extends City {
 	
-	private String monument;
-	private String pays;
-	City city;
-	int habitant;
+	static String monument;
+	Object City = getCity();
+	
+	public Capital(String monument, String name, String country, int people) {
+		super(name, country, people);
+		Capital.monument = monument;
+		// TODO Auto-generated constructor stub
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	}
 	
-	public Capital(String Monument, int habitant, String pays, City city) {
-		this.monument = Monument;
-		this.pays = pays;
-		this.habitant = habitant;
-		this.city = city;
-	}
-	
-	public void setpays(String pays) {
-		// TODO Auto-generated method stub
-		this.pays = pays;
-	}
-	
-	public String getpays() {
-		// TODO Auto-generated method stub
-		return pays;
-	}
-	
 	public void setmonument(String monument) {
 		// TODO Auto-generated method stub
-		this.monument = monument;
+		Capital.monument = monument;
 	}
 	
 	public String getmonument() {
@@ -38,25 +25,15 @@ public class Capital {
 		return monument;
 	}
 	
-	public void sethabitant(int habitant) {
-		// TODO Auto-generated method stub
-		this.habitant = habitant;
-	}
-	
-	public int gethabitant() {
-		// TODO Auto-generated method stub
-		return habitant;
-	}
-	
-	public void setCity(City city) {
-		this.city = city;
-	}
-	
 	public Object getCity() {
-		return city;
+		return City;
+	}
+
+	public void setCity(City city) {
+		this.City = city;
 	}
 	
 	public String toString() {
-		return getmonument() + " , " +gethabitant() + " d'habitants au total Monument : "+ getpays() + getCity();
+		return     getmonument() +", "+ getname() + ", "+getcountry()+", "+ getpeople() +".";
 	}
 }

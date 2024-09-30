@@ -2,14 +2,14 @@ public class Person {
     private String name;
     private String firstName;
     private int age;
-    private String town;
+    private String adress;
     private City city;
 	
-	 public Person(String name, String firstName, int age, String town, City city) {
+	 public Person(String name, String firstName, int age, String adress, City city) {
 	        this.name = name;
 	        this.firstName = firstName;
 	        this.age = age;
-	        this.town = town;
+	        this.adress = adress;
 	        this.city = city;
 	    }
 
@@ -30,12 +30,12 @@ public class Person {
 		this.firstName = firstName;
 	}
 	
-	public Object gettown() {
-		return town;
+	public Object getadress() {
+		return adress;
 	}
-	public void settown(String town) {
+	public void setadress(String adress) {
 		// TODO Auto-generated method stub
-		this.town = town;
+		this.adress = adress;
 	}
 	
 	public int getage() {
@@ -56,7 +56,7 @@ public class Person {
 	}
 	
 	public String toString() {
-		return  getname() +  getfirstName() + ", age= "+getage() + " "+  gettown()+ getCity();
+		return  getname()+ " " +  getfirstName() + ", age= "+getage() + ", "+  getadress()+ ","+ getCity();
 	}
 	
 	public void afficherAvecPopulation() {

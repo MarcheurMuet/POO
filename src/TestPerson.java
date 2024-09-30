@@ -10,7 +10,6 @@ public class TestPerson {
 
         Person[] personnes = {Macron, Sarkozy, Johnson, Depardieu, Kravitz, Lawrence};
         	
-        
         System.out.println("Liste des personnalitées");
         for (Person personne : personnes) {
         	if(((City) personne.getCity()).getcountry().contains("")){
@@ -21,12 +20,12 @@ public class TestPerson {
         System.out.println("--------------------------------------------------");
         System.out.println("Liste après notre filtre");
         for (Person personneVerif : personnes) {
-        	Object ville = personneVerif.gettown();
+        	Object ville = personneVerif.getadress();
         	if (((City) personneVerif.getCity()).getcountry().equals("France") && (ville.equals("Paris"))) {
-        		System.out.println(personneVerif + " population Paris 2000000 d'habitants");
+        		System.out.println(personneVerif + " population Paris 2000000 d'habitants.");
         	} else if (((City) personneVerif.getCity()).getcountry().equals("France")) {
                        System.out.println(personneVerif);
-                   }
-                }
-            }
+        	}
         }
+    }
+}

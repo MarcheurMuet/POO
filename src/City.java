@@ -48,7 +48,6 @@ public class City {
 //	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
 //		City city1 = new City("Toulouse", "France", 450000);
-	
 //		City city2 = new City("Montpellier", "France", 30000);
 //		City city3 = new City("Londre", "Angleterre", 40000);
 //		city1.display();
@@ -101,7 +100,7 @@ public class City {
 //	}
 	
 	public String toString() {
-		return "Borne city [name= "+ getName() + ", nbhabitant= " + getpeople()+"]";
+		return " Ville de naissance : [name= "+ getName() + ", nbhabitant= " + getpeople()+"].";
 	}
 	
 	public City(String name, int people) {
